@@ -1,0 +1,168 @@
+{
+    "info": {
+        "_postman_id": "69e1529c-697d-4540-bf3b-f3f1a503defd",
+        "name": "mobile otp auth",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "getUserDetails",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/auth/me",
+                    "path": [
+                        "api",
+                        "auth",
+                        "me"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJtb2JpbGUiOiI2MjY1OTk2NzU4IiwiZmluZ2VycHJpbnQiOiJkZXZpY2UtYWJjLTEyMzQiLCJpc3MiOiJtb2JpbGVPdHBBdXRoU3lzdGVtIiwic3ViIjoiMSIsImV4cCI6MTc0NTY3MTI1MSwiaWF0IjoxNzQ1NjY0MDUxfQ.j_JfoRm_68EwagCdc3nELw4QbOb__Q4tdOo7VV91Sfs",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "resend",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/api/auth/resend-otp",
+                    "path": [
+                        "api",
+                        "auth",
+                        "resend-otp"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"mobile_number\": \"6265996758\",\n  \"fingerprint\": \"device-abc-1234\"\n}"
+                }
+            }
+        },
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/api/auth/login",
+                    "path": [
+                        "api",
+                        "auth",
+                        "login"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"mobile_Number\": \"6265996758\",\n  \"otp\": \"900303\",\n  \"fingerprint\": \"device-abc-1234\"\n}"
+                }
+            }
+        },
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/api/auth/login",
+                    "path": [
+                        "api",
+                        "auth",
+                        "login"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"mobile_Number\": \"6265996758\",\n  \"otp\": \"900303\",\n  \"fingerprint\": \"device-abc-1234\"\n}"
+                }
+            }
+        },
+        {
+            "name": "register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/api/auth/register",
+                    "path": [
+                        "api",
+                        "auth",
+                        "register"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"mobile_number\": \"6265996758\",\n  \"fingerprint\": \"device-abc-1234\"\n}"
+                }
+            }
+        },
+        {
+            "name": "health",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/health",
+                    "path": [
+                        "health"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        }
+    ]
+}
